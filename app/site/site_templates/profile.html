@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card mb-4 bg-light">
+                <div class="card-body text-center">
+                    <img src="../../static/images/profile.jpg" alt="avatar" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5 class="my-3">{{ current_user.email }}</h5>
+                    <p class="text-muted mb-1">Carport User</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Email</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{ current_user.email }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Token</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{ current_user.token }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h6 class="mb-4">Carport Status</h6>
+                            <p class="mb-1">Active Bookings</p>
+                            <div class="bg-light rounded p-2">
+                                <div class="bg-primary rounded" style="width: 80%; height: 5px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h6 class="mb-4">Carport Usage</h6>
+                            <p class="mb-1">Total Hours Parked</p>
+                            <div class="bg-light rounded p-2">
+                                <div class="bg-primary rounded" style="width: 55%; height: 5px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
