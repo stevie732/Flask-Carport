@@ -96,16 +96,14 @@ class Car(db.Model):
     model = db.Column(db.String(100), nullable = False)
     year = db.Column(db.Integer, nullable = False)
     price = db.Column(db.Float, nullable = False)
-    condition = db.Column(db.String(50))
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable = False)
 
-    def __init__(self, make, model, year, price, condition, user_token, id = ''):
+    def __init__(self, make, model, year, price, user_token, id = ''):
         self.id = self.set_id()
         self.make = make
         self.model = model
         self.year = year
         self.price = price
-        self.condition = condition
         self.user_token = user_token
 
     def __repr__(self):
